@@ -1,11 +1,11 @@
 {
-    "cmd": ["bash","-c", "chmod +x '$file' && osascript -e 'tell application \"Terminal\" to activate' -e 'tell application \"Terminal\" to do script \"cd '${project_path:${folder}}'; bash '$file'\"'"],
+    "cmd": ["bash","-c", "chmod +x '$file' && open -a Terminal '$file'"],
     "selector": "source.command",
     "variants":
     [
         {
             "name": "Run",
-            "cmd": ["bash","-c", "chmod +x '$file' && osascript -e 'tell application \"Terminal\" to activate' -e 'tell application \"Terminal\" to do script \"cd '${project_path:${folder}}'; bash '$file'\"'"]
+            "cmd": ["bash","-c", "chmod +x '$file' && open -a Terminal '$file'"]
         }
     ],
     "working_dir": "${project_path}"
